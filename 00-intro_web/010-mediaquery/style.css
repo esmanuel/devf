@@ -1,0 +1,22 @@
+body{
+    background-color: darkblue;
+    color: aliceblue;
+    font-size: 200px;
+}
+@media only screen and (max-width:600px){
+ body{
+     
+     background-color: aliceblue;
+     color: darkblue;
+     font-size: 100px;
+ }
+}
+@media only screen and (max-width:450px){
+    body{
+        display: none;
+        background-color: olive;
+        color: darksalmon;
+        font-size: 50px;
+    
+    }
+   }

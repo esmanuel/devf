@@ -1,0 +1,17 @@
+.padre{
+    height: 300px;
+    border: 2px solid;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.hija{
+    border: 2px solid red;
+    width: 100px;
+    height: 100px;
+}
+.hijo{
+    border: 2px solid yellow;
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML semántico</title>
+</head>
+
+<body>
+    <header>
+        <h1>Hipervínculos de navegación.</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Información</a></li>
+                <li><a href="#">Imagen</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <div>
+            <div>
+                <h2>Vieja escuela</h2>
+                <p>Se usaban dos div con class para identificar ventanas o bloques.</p>
+            </div>
+        </div>
+
+
+        <section>
+            <article>
+                <h2>Nueva escuela</h2>
+                <p>Esto es nueva escuela, se usa section y article como ventanas de general a particular,
+                    respectivamente</p>
+
+                <p> <img class="fig" src="./img/h5d-sectioning-flowchart.png" alt="La misma de html semantica"> Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Dolorum labore soluta suscipit aspernatur
+                    nulla numquam dolores fugiat tempora, animi provident itaque et officiis ratione aliquam optio!
+                    Obcaecati accusantium quos rerum?</p>
+            </article>
+           
+            
+        </section>
+        <aside>
+            <h3>Como se comporta aside?</h3>
+            <p>Este bloque es para saber como se comporta aside, representa un contenido relacionado con informacion
+                principal. </p>
+        </aside>
+        <figure>
+            <img class="imagen1"src="./img/h5d-sectioning-flowchart.png" alt="Esto es una figura">
+            <figcaption>Esto es una imagen de HTML semantico.</figcaption>
+        </figure>
+        <section id="ejemplo_media">
+            <article>
+                <audio controls>
+                    <source srcs="" type="audio/mp3">
+                </audio>
+            </article>
+            <article>
+                <!-- <video controls>
+                <source src="https://www.youtube.com/watch?v=uIss2Qmmc5k" type="video/mp4">
+            </video> -->
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/uIss2Qmmc5k?start=5"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </article>
+            <article>
+                <!-- embed se usa para adjuntar algun tipo de archivo externo(ej. pdf, pagina web,etc,) -->
+                <embed width="500px" height="700px" src="http://www.fcb.uanl.mx/IDCyTA/files/volume3/4/4/56.pdf">
+            </article>
+        </section>
+
+
+    </main>
+</body>
+
+</html>

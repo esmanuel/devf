@@ -1,0 +1,82 @@
+.padre{
+    background-color: aliceblue;
+    height: 500px;
+    width: 80%;
+}
+
+.hijo1{
+    background-color: purple;
+    height: 250px;
+    width: 250px;
+    float:left;
+}
+.hijo2{
+    background-color: tomato;
+    height: 150px;
+    width: 150px;
+    float: right;
+
+}
+.hijo3{
+    background-color: olivedrab;
+    height: 200px;
+    width: 200px;
+    clear: both;
+}
+.hijo4{
+    background-color: darkgoldenrod;
+    height: 50px;
+    width: 50px;
+    clear: left;
+}
+
+.madre{
+    background-color: thistle;
+    height: 500px;
+    width: 80%;
+}
+
+.hija1{
+    background-color: darkcyan;
+    height: 100px;
+    width: 100px;
+    position:static;
+}
+.hija2{
+    background-color: darkorange;
+    height: 150px;
+    width: 150px;
+    /* Se mueve en su posicion, dentro de su div */
+    position: relative;
+    top: 40px;
+    left:100px;
+
+}
+.hija3{
+    background-color: darkorchid;
+    height: 100px;
+    width: 100px;
+    /* Se fija en la parte superior de la pagina */
+    position:absolute;
+    top: 100px;
+    left: 50px;
+}
+.hija4{
+    background-color: darkred;
+    height: 50px;
+    width: 50px;
+    /* fixed se mueve el contenedor en toda la pagina */
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+}
+
+.hija5{
+    background-color: yellowgreen;
+    height: 50px;
+    width: 50px;
+    /* Sticky se mueve dentro del contenedor */
+    position: sticky; 
+    left: 25px;
+    bottom: 25px;
+}

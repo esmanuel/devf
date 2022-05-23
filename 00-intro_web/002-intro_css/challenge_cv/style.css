@@ -1,0 +1,41 @@
+
+body{
+    font-family: 'Bebas Neue', cursive;
+    background-color: #024923;
+}
+h1{
+    color: orangered;
+}
+.cuadro{
+    height: 400px;
+    width: 400px;
+}
+h2{
+    color: orange;
+}
+p{
+    color:white;
+}
+ul{
+    color: white;
+    font-style: italic;
+}
+.rectangulo{
+    width: 450px;
+    height: 350px;
+}
+ul a{
+    color: aqua;
+    font-weight: bolder;
+}
+.post{
+    font-size: xx-large;
+}
+.pd{
+    font-size: x-large;
+}
+.despedida{
+    color: aquamarine;
+    font-size: small;
+    font-style: italic;
+}

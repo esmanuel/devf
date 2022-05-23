@@ -1,0 +1,67 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header{
+    background-color: gainsboro;
+    padding: 20px;
+    text-align: center;
+}
+nav{
+    /* overflow se usa cuando el contenido del contenedor es mayor */
+    overflow: hidden;
+    background-color: black;
+}
+.barra-nav a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+.principal{
+    background-color: gainsboro;
+    padding: 40px;
+    text-align: center;
+    font-size: 35px;
+}
+#info{
+    display: flex;
+
+}
+.informacion{
+    float:left;
+    padding: 20px;
+    width: 70%;
+    background-image: url("https://images2.dwell.com/photos/6063391372700811264/6133441936058335232/original.jpg?auto=format&q=35&w=1920");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+
+}
+#casa2{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+
+}
+article{
+    background-color: azure;
+    padding: 20px;
+    width: 30%;
+    float: right;
+    text-align: center;
+}
+#casa1{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+footer{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    color:white;
+}
