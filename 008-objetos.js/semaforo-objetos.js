@@ -30,8 +30,8 @@ let { color, siguienteLuz, anteriorLuz, luzActual } = semaforo;
 function cambiarLuz() {
     switch (luzActual) {
         case ROJO:                          // EN CASO DE LUZ ROJO
-            color = 'green';                // CAMBIA ESTE COLOR
-            siguienteLuz = 'verde';         // SE ASIGNA EL COLOR AL SIGUIENTE ELEMENTO EN HTML
+            color = 'green';                // CAMBIA ESTE COLOR CSS
+            siguienteLuz = 'verde';         // SE ASIGNA EL COLOR AL SIGUIENTE ELEMENTO EN ID HTML
             anteriorLuz = 'rojo';           // COLOR ANTERIOE AL CAMBIO EN ELEMENTO HTML
             luzActual = VERDE;              // LUZ ENCENDIDA VERDE
             break;
