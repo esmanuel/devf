@@ -1,0 +1,6 @@
+1 crear juego piedra papel o tijera
+2.- debe ser para dos jugadores
+3.-define ganar basado en la regla del juego
+4.- juego a 3 rondas
+5.- pueden escribir su nombre los jugadores
+6.- Cada jugador tiene un turno y comienza jugaro 1
