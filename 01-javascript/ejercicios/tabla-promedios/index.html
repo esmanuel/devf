@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="promedios.js"></script>
+    <title>Promedios</title>
+</head>
+
+<body>
+    <main>
+
+    <section>
+        <h1>Sistema automatizado de promedios.</h1><br>
+        
+        <label for="cantidadAlumnos">Cantidad de Almunos</label>
+        <input id="alumnos" type="number" name="cantidadAlumnos">
+        
+        <label for="notasAlumnos">Cantidad de Notas por Almunos</label>
+        <input id="notas" type="number" name="cantidadNotas">
+        
+        <button onclick="generar()">Generar Planilla</button>
+    </section><br>
+   
+   
+    <h2>Planilla del Grupo</h2>
+    <section>
+        <table id="planilla" border="1px">
+
+        </table><br>
+        
+    </section>
+    <article>
+        <button onclick="calcular()">Promediar</button>
+    </article>
+    <h4 id="promedioGeneral">Promedio general:</h4>
+
+</main>
+</body>
+
+</html>
