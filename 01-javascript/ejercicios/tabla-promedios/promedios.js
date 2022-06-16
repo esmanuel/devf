@@ -1,9 +1,10 @@
-
+let alumnos;
+let notas;
 let planilla = document.getElementById('planilla');
 
 function generar() {
-    let alumnos = Number(document.getElementById('alumnos').value);
-    let notas = Number(document.getElementById('notas').value);
+    alumnos = Number(document.getElementById('alumnos').value);
+    notas = Number(document.getElementById('notas').value);
 
     // ciclo para crear filas
     for (let i = 1; i <= alumnos + 1; i++) {
@@ -40,8 +41,10 @@ function generar() {
                     elemento = document.createTextNode(i - 1);
                 } else if (j === notas + 3) {//columna definitiva
                     elemento = document.createElement('span');
+                    elemento.setAttribute('id', 'p' + (i - 1));
                 } else { //notas
                     elemento = document.createElement('input');
+                    elemento.setAttribute('id', 'n' + (j - 2) + 'e' + (i - 1));
                 }
                 td.appendChild(elemento);
                 tr.appendChild(td);
@@ -52,6 +55,32 @@ function generar() {
     }
 }
 
-function calcular(){
-    let promedio=
+//creamos funcion para generar promedio
+function calcular() {
+    let sumaGeneral = 0;
+    let promedioGeneral;
+
+    alumnos = Number(document.getElementById('alumnos').value);
+    notas = Number(document.getElementById('notas').value);
+    //Leemos estudiantes en la tabla
+    for (let i = 2; i <= alumnos + 1; i++) {
+        let suma = 0;
+        let promedio = 0;
+        //leemos notas de estudiante en cada fila
+        for (let j = 3; j <= notas + 3; j++) {
+            if (j === notas + 3) {
+                //calculamos el promedio
+                promedio = suma / notas;
+                //suma general
+                sumaGeneral = sumaGeneral + promedio;
+
+                document.getElementById('p' + (i - 1)).innerText = promedio;
+            }else{
+                suma = suma + Number(document.getElementById('n' + (j - 2) + 'e' + (i - 1)).value);
+            }
+        }
+    }
+    promedioGeneral=sumaGeneral/alumnos;
+    document.getElementById('promedioGeneral').innerText = `El promedio general del grupo es ${parseInt(promedioGeneral)}`;
+
 }
