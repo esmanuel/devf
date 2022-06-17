@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -14,19 +14,21 @@
 <body>
     <main id="contenedor">
         <div>
-        <section id="inicioSesion" class="visible">
+                                    <!-- PANEL INICIO SESION -->
+        <section id="inicioDeSesion" class="visible">
             <div class="padre">
                 <h1>TU BANCO DevF.</h1>
                 <div class="hijo">
                     <label for="usuario">Usuario</label>
                     <input id="usuario" type="text" name="usuario">
-                    <label for="contraseña">Contraseña</label>
-                    <input id="constraseña" type="password" name="contraseña">
+                    <label for="contrasena">Contraseña</label>
+                    <input id="contrasena" type="text" name="contrasena">
                     <button id="iniciarSesion" class="btn">Iniciar Sesion</button>
                 </div>
             </div>
         </section>
-        <section id="operaciones" class="invisible">
+                                    <!-- PANEL INICIO OPERACIONES CAJERO -->
+        <section id="inicioOperaciones" class="invisible">
             <div class="padre">
                 <h1>TU BANCO DevF.</h1>
                 <div class="hijo">
@@ -37,27 +39,26 @@
                         <button id="btn-retirar" class="btn">Retirar</button>
                         <button id="btn-salir" class="btn-fuera">Salir</button>
                     </div>
-
                 </div>
-
             </div>
         </section>
-        <section id="operacionDeposito" class="invisible">
+                                    <!-- PANEL INICIO DEPOSITO -->
+        <section id="inicioOperacionDeposito" class="invisible">
             <div class="padre">
                 <h1>TU BANCO DevF.</h1>
                 <div class="hijo">
                     <h2>Introduce la cantidad a depositar...</h2>
                     <div class="operaciones">
                         <label for=""></label>
-                        <input id="numeroDeposito" type="number" placeholder="Introduce la cantidad">
+                        <input id="valorDeposito" type="number" placeholder="Introduce la cantidad">
                         <button id='btn-cantidadDeposito' class="btn">Depositar</button>
                         <button id="btn-salir" class="btn-fuera">Salir</button>
                     </div>
-
                 </div>
             </div>
         </section>
-        <section id="operacionRetiro" class="invisible">
+                                    <!-- PANEL INICIO RETIRO -->
+        <section id="inicioOperacionRetiro" class="invisible">
             <div class="padre">
                 <h1>TU BANCO DevF.</h1>
                 <div class="hijo">
@@ -68,15 +69,15 @@
                         <button id='btn-cantidadRetirar' class="btn">Retirar</button>
                         <button id="btn-salir" class="btn-fuera">Salir</button>
                     </div>
-
                 </div>
             </div>
         </section>
-        <section id="operacionSaldo" class="invisible">
+                                    <!-- PANEL INICIO CONSULTAR SALDO -->
+        <section id="inicioOperacionSaldo" class="invisible">
             <div class="padre">
                 <h1>TU BANCO DevF.</h1>
-                <div class="hijo">
-                    <h2>Tu saldo disponible es de:</h2>
+                <div id="hijoSaldo" class="hijo">
+                    <h2>Tu saldo disponible es:</h2>
                     <div>
                         <input id="resultadoSaldo" type="text" disabled readonly>
                     </div>

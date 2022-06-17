@@ -18,12 +18,12 @@ body{
     background-color: #ffffff;
     padding:3%;
 }
-/* .invisible{
+.invisible{
     display: none;
 }
 .visible{
     display: block;
-} */
+}
 .padre {
     display: flex;
     flex-direction: column;
