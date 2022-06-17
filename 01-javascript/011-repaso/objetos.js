@@ -12,5 +12,7 @@ console.log(perro.nombre);
 perro.nombre="no soy brutus";
 console.log(perro.nombre);
 //agregar propiedad a objeto
-console.log(perro.id); 
+// perro.id='cero';
+// console.log(perro.id); 
+console.log(perro.patas)
 console.log(perro.ladrar());

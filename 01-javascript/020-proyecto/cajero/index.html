@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="cajero.js"></script>
+    <title>Cajero Automatico</title>
+
+</head>
+
+<body>
+    <main id="contenedor">
+        <div>
+        <section id="inicioSesion" class="visible">
+            <div class="padre">
+                <h1>TU BANCO DevF.</h1>
+                <div class="hijo">
+                    <label for="usuario">Usuario</label>
+                    <input id="usuario" type="text" name="usuario">
+                    <label for="contraseña">Contraseña</label>
+                    <input id="constraseña" type="password" name="contraseña">
+                    <button id="iniciarSesion" class="btn">Iniciar Sesion</button>
+                </div>
+            </div>
+        </section>
+        <section id="operaciones" class="invisible">
+            <div class="padre">
+                <h1>TU BANCO DevF.</h1>
+                <div class="hijo">
+                    <h2>¿Que operación deseas realizar...?</h2>
+                    <div class="operaciones">
+                        <button id="btn-depositar" class="btn">Depositar</button>
+                        <button id="btn-saldo" class="btn">Consultar Saldo</button>
+                        <button id="btn-retirar" class="btn">Retirar</button>
+                        <button id="btn-salir" class="btn-fuera">Salir</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <section id="operacionDeposito" class="invisible">
+            <div class="padre">
+                <h1>TU BANCO DevF.</h1>
+                <div class="hijo">
+                    <h2>Introduce la cantidad a depositar...</h2>
+                    <div class="operaciones">
+                        <label for=""></label>
+                        <input id="numeroDeposito" type="number" placeholder="Introduce la cantidad">
+                        <button id='btn-cantidadDeposito' class="btn">Depositar</button>
+                        <button id="btn-salir" class="btn-fuera">Salir</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="operacionRetiro" class="invisible">
+            <div class="padre">
+                <h1>TU BANCO DevF.</h1>
+                <div class="hijo">
+                    <h2>Introduce la cantidad a retirar...</h2>
+                    <div class="operaciones">
+                        <label for=""></label>
+                        <input id="numeroRetiro" type="number" placeholder="Introduce la cantidad">
+                        <button id='btn-cantidadRetirar' class="btn">Retirar</button>
+                        <button id="btn-salir" class="btn-fuera">Salir</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="operacionSaldo" class="invisible">
+            <div class="padre">
+                <h1>TU BANCO DevF.</h1>
+                <div class="hijo">
+                    <h2>Tu saldo disponible es de:</h2>
+                    <div>
+                        <input id="resultadoSaldo" type="text" disabled readonly>
+                    </div>
+                    <div class="operaciones">
+                        <button id="btn-depositar" class="btn">Depositar</button>
+                        <button id="btn-retirar" class="btn">Retirar</button>
+                        <button id="btn-salir" class="btn-fuera">Salir</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+</body>
+
+</html>
