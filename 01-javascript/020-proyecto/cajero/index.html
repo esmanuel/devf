@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Stoke:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script defer src="cajero.js"></script>
     <title>Cajero Automatico</title>
@@ -14,84 +18,107 @@
 <body>
     <main id="contenedor">
         <div>
-                                    <!-- PANEL INICIO SESION -->
-        <section id="inicioDeSesion" class="visible">
-            <div class="padre">
-                <h1>TU BANCO DevF.</h1>
-                <div class="hijo">
-                    <label for="usuario">Usuario</label>
-                    <input id="usuario" type="text" name="usuario">
-                    <label for="contrasena">Contraseña</label>
-                    <input id="contrasena" type="text" name="contrasena">
-                    <button id="iniciarSesion" class="btn">Iniciar Sesion</button>
-                </div>
-            </div>
-        </section>
-                                    <!-- PANEL INICIO OPERACIONES CAJERO -->
-        <section id="inicioOperaciones" class="invisible">
-            <div class="padre">
-                <h1>TU BANCO DevF.</h1>
-                <div class="hijo">
-                    <h2>¿Que operación deseas realizar...?</h2>
-                    <div class="operaciones">
-                        <button id="btn-depositar" class="btn">Depositar</button>
-                        <button id="btn-saldo" class="btn">Consultar Saldo</button>
-                        <button id="btn-retirar" class="btn">Retirar</button>
-                        <button id="btn-salir" class="btn-fuera">Salir</button>
+            <!-- PANEL INICIO SESION -->
+            <section id="inicioDeSesion" class="visible cajacentro">
+                <div class="padre">
+                    <h1>Tu banco DevF.</h1>
+                    <div class="hijo">
+                        <label for="usuario">Usuario</label>
+                        <input id="usuario" type="text" name="usuario">
+                        <label for="contrasena">Contraseña</label>
+                        <input id="contrasena" type="password" name="contrasena">
+                        <button onclick="iniciarSesion()" class="btn">Iniciar sesión</button>
                     </div>
                 </div>
-            </div>
-        </section>
-                                    <!-- PANEL INICIO DEPOSITO -->
-        <section id="inicioOperacionDeposito" class="invisible">
-            <div class="padre">
-                <h1>TU BANCO DevF.</h1>
-                <div class="hijo">
-                    <h2>Introduce la cantidad a depositar...</h2>
-                    <div class="operaciones">
-                        <label for=""></label>
-                        <input id="valorDeposito" type="number" placeholder="Introduce la cantidad">
-                        <button id='btn-cantidadDeposito' class="btn">Depositar</button>
-                        <button id="btn-salir" class="btn-fuera">Salir</button>
+            </section>
+            <!-- PANEL INICIO OPERACIONES CAJERO -->
+            <section id="inicioOperaciones" class="invisible cajacentro">
+                <div class="padre">
+                    <h1>Tu banco DevF.</h1>
+                    <div class="hijo">
+                        <h3>¿Que operación deseas realizar?</h3>
+                        <div class="operaciones">
+                            <button onclick='depositar()' class="btn">Depositar</button>
+                            <button onclick="saldo()" class="btn">Consultar Saldo</button>
+                            <button onclick="retirar()" class="btn">Retirar</button>
+                            <button onclick="salir()" class="btn-fuera">Salir</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-                                    <!-- PANEL INICIO RETIRO -->
-        <section id="inicioOperacionRetiro" class="invisible">
-            <div class="padre">
-                <h1>TU BANCO DevF.</h1>
-                <div class="hijo">
-                    <h2>Introduce la cantidad a retirar...</h2>
-                    <div class="operaciones">
-                        <label for=""></label>
-                        <input id="numeroRetiro" type="number" placeholder="Introduce la cantidad">
-                        <button id='btn-cantidadRetirar' class="btn">Retirar</button>
-                        <button id="btn-salir" class="btn-fuera">Salir</button>
+            </section>
+            <!-- PANEL INICIO DEPOSITO -->
+            <section id="inicioOperacionDeposito" class="invisible cajacentro">
+                <div class="padre">
+                    <h1>Tu banco DevF.</h1>
+                    <div class="hijo">
+                        <h3>Introduce la cantidad a depositar:</h3>
+                        <div class="operaciones">
+                            <label for=""></label>
+                            <input id="valorDeposito" type="number" placeholder="Introduce la cantidad">
+                            <button onclick='cantidadDeposito()' class="btn">Realizar deposito</button>
+                            <button onclick="salir()" class="btn-fuera">Salir</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-                                    <!-- PANEL INICIO CONSULTAR SALDO -->
-        <section id="inicioOperacionSaldo" class="invisible">
-            <div class="padre">
-                <h1>TU BANCO DevF.</h1>
-                <div id="hijoSaldo" class="hijo">
-                    <h2>Tu saldo disponible es:</h2>
-                    <div>
-                        <input id="resultadoSaldo" type="text" disabled readonly>
+            </section>
+            <!-- PANEL INICIO RETIRO -->
+            <section id="inicioOperacionRetiro" class="invisible cajacentro">
+                <div class="padre">
+                    <h1>Tu banco DevF.</h1>
+                    <div class="hijo">
+                        <h3>Introduce la cantidad a retirar:</h3>
+                        <div class="operaciones">
+                            <label for=""></label>
+                            <input id="numeroRetiro" type="number" placeholder="Introduce la cantidad">
+                            <button onclick="cantidadRetiro()" class="btn">Realizar retiro</button>
+                            <button onclick="salir()" class="btn-fuera">Salir</button>
+                        </div>
                     </div>
-                    <div class="operaciones">
-                        <button id="btn-depositar" class="btn">Depositar</button>
-                        <button id="btn-retirar" class="btn">Retirar</button>
-                        <button id="btn-salir" class="btn-fuera">Salir</button>
-                    </div>
+                </div>
+            </section>
+            <!-- PANEL INICIO CONSULTAR SALDO -->
+            <section id="inicioOperacionSaldo" class="invisible cajacentro">
+                <div class="padre">
+                    <h1>Tu banco DevF.</h1>
+                    <div id="hijoSaldo" class="hijo">
+                        <h3>Tu saldo disponible es:</h3>
+                        <div>
+                            <input id="resultadoSaldo" type="text" disabled readonly>
+                        </div>
+                        <div class="operaciones">
+                            <button onclick='depositar()' class="btn">Depositar</button>
+                            <!--onclick no addeventlistener-->
+                            <button onclick="retirar()" class="btn">Retirar</button>
+                            <button onclick="salir()" class="btn-fuera">Salir</button>
+                        </div>
 
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
         </div>
     </main>
 </body>
 
 </html>
+
+<!-- abrir carpeta proyecto
+correr npm start
+archivo App.js (eliminar todo)
+
+import * as React from 'react';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+
+export default function BasicButtons() {
+  return (
+    <Stack spacing={2} direction="row">
+      <Button variant="text">Text</Button>
+      <Button variant="contained">Contained</Button>
+      <Button variant="outlined">Outlined</Button>
+    </Stack>
+  );
+}
+regresar terminal
+correr npm start
+
+-->

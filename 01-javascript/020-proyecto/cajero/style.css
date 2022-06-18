@@ -1,22 +1,26 @@
+
 body{
+    
     font-size: 18px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Kdam Thmor Pro', sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url(https://wallup.net/wp-content/uploads/2019/09/147012-bangkok-night-lights.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-#contenedor {
-    max-width: 1024px;
-    margin: 0 auto;
-}
+
 .cajacentro {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: center;
+    justify-content: center;
     margin: 12% auto !important;
-    width: 450px;
+    width: 600px;
     height: 100%;
-    background-color: #ffffff;
+    background-color: rgba(0, 8, 45, 0.87);
+    color: whitesmoke;
     padding:3%;
+    border-radius: 20px;
 }
 .invisible{
     display: none;
@@ -39,27 +43,40 @@ body{
 
 }
 .btn{
-    margin: 5px;
-    padding: 5px;
+    margin-top: 15px;
+    padding: 10px;
     width: 300px;
+    border: none;
     border-radius: 10px;
-    background-color: teal;
+    background-color: rgba(0, 19, 101, 0.87);
     color: white;
     font-weight:500;
+}
+.btn:hover{
+    background-color: rgba(0, 22, 120, 0.87);
+    font-weight: bolder;
 }
 .btn-fuera{
-    margin: 5px;
-    padding: 5px;
+    margin-top: 15px;
+    padding: 10px;
     width: 300px;
+    border: none;
     border-radius: 10px;
-    background-color: darkred;
+    background-color: rgba(183, 0, 0, 0.75);
     color: white;
     font-weight:500;
 }
+.btn-fuera:hover{
+    background-color: rgba(206, 1, 1, 0.75);
+    font-weight: bolder;
+}
 input{
-    margin: 5px;
+    margin: 12px 0px;
     padding: 5px;
     width: 300px;
+    color: black;
+    font-weight: bolder;
+    border: none;
     border-radius: 10px;
     text-align: center;
 }
