@@ -1,95 +1,92 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Stoke:wght@300&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="cajero.js"></script>
-    <title>Cajero Automatico</title>
-
-</head>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="cajero.js"></script>
+        <title>Cajero Automatico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
 
 <body>
-    <main id="contenedor">
+    <main class="container">
         <div>
             <!-- PANEL INICIO SESION -->
-            <section id="inicioDeSesion" class="visible cajacentro">
-                <div class="padre">
-                    <h1>Tu banco DevF.</h1>
-                    <div class="hijo">
+            <section id="inicioDeSesion" class="visible cajacentro container">
+                <div class="padre container">
+                    <h1>Banco Dev.F</h1>
+                    <div class="hijo container">
                         <label for="usuario">Usuario</label>
                         <input id="usuario" type="text" name="usuario">
                         <label for="contrasena">Contraseña</label>
                         <input id="contrasena" type="password" name="contrasena">
-                        <button onclick="iniciarSesion()" class="btn">Iniciar sesión</button>
+                        <button onclick="iniciarSesion()" class="btn btn-outline-info">Iniciar sesión</button>
                     </div>
                 </div>
             </section>
             <!-- PANEL INICIO OPERACIONES CAJERO -->
-            <section id="inicioOperaciones" class="invisible cajacentro">
-                <div class="padre">
-                    <h1>Tu banco DevF.</h1>
-                    <div class="hijo">
+            <section id="inicioOperaciones" class="invisible cajacentro container">
+                <div class="padre container">
+                    <h1>Banco Dev.F</h1>
+                    <div class="hijo container">
                         <h3>¿Que operación deseas realizar?</h3>
-                        <div class="operaciones">
-                            <button onclick='depositar()' class="btn">Depositar</button>
-                            <button onclick="saldo()" class="btn">Consultar Saldo</button>
-                            <button onclick="retirar()" class="btn">Retirar</button>
-                            <button onclick="salir()" class="btn-fuera">Salir</button>
+                        <div class="operaciones container">
+                            <button onclick='depositar()' class="btn btn-outline-light">Depositar</button>
+                            <button onclick="saldo()" class="btn btn-outline-light">Consultar Saldo</button>
+                            <button onclick="retirar()" class="btn btn-outline-light">Retirar</button>
+                            <button onclick="salir()" class="btn-fuera btn-outline-danger">Salir</button>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- PANEL INICIO DEPOSITO -->
-            <section id="inicioOperacionDeposito" class="invisible cajacentro">
-                <div class="padre">
-                    <h1>Tu banco DevF.</h1>
-                    <div class="hijo">
+            <section id="inicioOperacionDeposito" class="invisible cajacentro container">
+                <div class="padre container">
+                    <h1>Banco Dev.F</h1>
+                    <div class="hijo container">
                         <h3>Introduce la cantidad a depositar:</h3>
-                        <div class="operaciones">
+                        <div class="operaciones container">
                             <label for=""></label>
                             <input id="valorDeposito" type="number" placeholder="Introduce la cantidad">
-                            <button onclick='cantidadDeposito()' class="btn">Realizar deposito</button>
-                            <button onclick="salir()" class="btn-fuera">Salir</button>
+                            <button onclick='cantidadDeposito()' class="btn btn-outline-light">Realizar deposito</button>
+                            <button onclick="salir()" class="btn-fuera btn-outline-danger">Salir</button>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- PANEL INICIO RETIRO -->
-            <section id="inicioOperacionRetiro" class="invisible cajacentro">
-                <div class="padre">
-                    <h1>Tu banco DevF.</h1>
-                    <div class="hijo">
+            <section id="inicioOperacionRetiro" class="invisible cajacentro container">
+                <div class="padre container">
+                    <h1>Banco Dev.F</h1>
+                    <div class="hijo container">
                         <h3>Introduce la cantidad a retirar:</h3>
-                        <div class="operaciones">
-                            <label for=""></label>
+                        <div class="operaciones container">
                             <input id="numeroRetiro" type="number" placeholder="Introduce la cantidad">
-                            <button onclick="cantidadRetiro()" class="btn">Realizar retiro</button>
-                            <button onclick="salir()" class="btn-fuera">Salir</button>
+                            <button onclick="cantidadRetiro()" class="btn btn-outline-light">Realizar retiro</button>
+                            <button onclick="salir()" class="btn-fuera btn-outline-danger">Salir</button>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- PANEL INICIO CONSULTAR SALDO -->
-            <section id="inicioOperacionSaldo" class="invisible cajacentro">
-                <div class="padre">
-                    <h1>Tu banco DevF.</h1>
-                    <div id="hijoSaldo" class="hijo">
+            <section id="inicioOperacionSaldo" class="invisible cajacentro container">
+                <div class="padre container">
+                    <h1>Banco Dev.F</h1>
+                    <div id="hijoSaldo" class="hijo container">
                         <h3>Tu saldo disponible es:</h3>
                         <div>
                             <input id="resultadoSaldo" type="text" disabled readonly>
                         </div>
-                        <div class="operaciones">
-                            <button onclick='depositar()' class="btn">Depositar</button>
+                        <div class="operaciones container">
+                            <button onclick='depositar()' class="btn btn-outline-light">Depositar</button>
                             <!--onclick no addeventlistener-->
-                            <button onclick="retirar()" class="btn">Retirar</button>
-                            <button onclick="salir()" class="btn-fuera">Salir</button>
+                            <button onclick="retirar()" class="btn btn-outline-light">Retirar</button>
+                            <button onclick="salir()" class="btn-fuera btn-outline-danger">Salir</button>
                         </div>
 
                     </div>
@@ -97,6 +94,11 @@
             </section>
         </div>
     </main>
+    <footer class="container">
+        <h6>BancoDevF©</h6>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 
 </html>
