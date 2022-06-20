@@ -9,12 +9,11 @@ let inicioOperacionSaldo = document.getElementById('inicioOperacionSaldo');
 //VARIABLES
 let usuario;
 let contrasena;
-let usuarioActivo;
 let index;
 let nuevoSaldo;
 let divHijoSaldo;
-let retiroH3
-let depoH3;
+let retiroH5
+let depoH5;
 let texto;
 
 
@@ -80,11 +79,13 @@ function depositar() {
 //Click REALIZAR DEPOSITO
 function cantidadDeposito() {
     let valorADepositar = Number(document.getElementById('valorDeposito').value);
-    if ((cuentas[index].saldo + valorADepositar) > 990) {
+    if (valorADepositar === 0) {
+        alert(` ¡¡Intentalo de nuevo!! Para realizar un depósito la cantidad debe ser mayor a $0.00 mxn.`);
+    } else if ((cuentas[index].saldo + valorADepositar) > 990) {
         let maximo = 990 - cuentas[index].saldo;
-        alert(`Solo puedes depositar $${maximo} para tener un max. de $990 en tu cuenta. `);
-
-    } else {
+        alert(`Solo puedes depositar $${maximo}.00 mxn para tener un max. de $990.00 mxn en tu cuenta. `);
+    }
+    else {
 
         cuentas[index].saldo = (valorADepositar + cuentas[index].saldo);
 
@@ -94,15 +95,15 @@ function cantidadDeposito() {
         inicioOperacionSaldo.classList.add('visible');
 
         divHijoSaldo = document.getElementById('hijoSaldo')
-        depoH3 = document.createElement('h3');
-        texto = document.createTextNode(`Depositaste: $${valorADepositar}`);
-        depoH3.appendChild(texto);
-        divHijoSaldo.prepend(depoH3);
+        depoH5 = document.createElement('h5');
+        texto = document.createTextNode(`Depositaste: $${valorADepositar}.00 mxn`);
+        depoH5.appendChild(texto);
+        divHijoSaldo.prepend(depoH5);
 
         nuevoSaldo = document.getElementById('resultadoSaldo');
-        nuevoSaldo.value = `$${cuentas[index].saldo}`;
+        nuevoSaldo.value = `$${cuentas[index].saldo}.00 mxn`;
 
-        divHijoSaldo.removeChild(retiroH3);
+        divHijoSaldo.removeChild(retiroH5);
     }
 }
 
@@ -122,10 +123,12 @@ function retirar() {
 //click REALIZAR RETIRO
 function cantidadRetiro() {
     let valorARetirar = Number(document.getElementById('numeroRetiro').value);
-    if ((cuentas[index].saldo - valorARetirar) < 10) {
-        let minimo = cuentas[index].saldo - 10;
-        alert(`Solo puedes retirar $${minimo}. Recuerda debes tener un min. de $10 en tu cuenta. `)
+    if (valorARetirar === 0) {
+        alert(`¡Sabemos que fue un error! Para realizar un retiro la cantidad debe ser mayor a $0.00 mxn. ¡Intentalo de nuevo ${usuario}!.`)
 
+    } else if ((cuentas[index].saldo - valorARetirar) < 10) {
+        let minimo = cuentas[index].saldo - 10;
+        alert(`Solo puedes retirar $${minimo}.00 mxn. Recuerda debes tener un min. de $10.00 mxn en tu cuenta. `)
     } else {
 
         cuentas[index].saldo = (cuentas[index].saldo - valorARetirar);
@@ -136,15 +139,15 @@ function cantidadRetiro() {
         inicioOperacionSaldo.classList.add('visible');
 
         divHijoSaldo = document.getElementById('hijoSaldo')
-        retiroH3 = document.createElement('h3');
-        texto = document.createTextNode(`Retiraste: $${valorARetirar}`);
-        retiroH3.appendChild(texto);
-        divHijoSaldo.prepend(retiroH3);
+        retiroH5 = document.createElement('h5');
+        texto = document.createTextNode(`Retiraste: $${valorARetirar}.00 mxn`);
+        retiroH5.appendChild(texto);
+        divHijoSaldo.prepend(retiroH5);
 
         nuevoSaldo = document.getElementById('resultadoSaldo');
-        nuevoSaldo.value = `$${cuentas[index].saldo}`;
+        nuevoSaldo.value = `$${cuentas[index].saldo}.00 mxn`;
 
-        divHijoSaldo.removeChild(depoH3);
+        divHijoSaldo.removeChild(depoH5);
     }
 }
 
@@ -157,7 +160,7 @@ function saldo() {
     inicioOperacionSaldo.classList.remove('invisible');
 
     let saldoUsuario = document.getElementById('resultadoSaldo');
-    saldoUsuario.value = `$${cuentas[index].saldo}`;
+    saldoUsuario.value = `$${cuentas[index].saldo}.00 mxn`;
 }
 //click boton SALIR
 function salir() {

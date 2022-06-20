@@ -1,4 +1,6 @@
-
+*{
+    background-color:rgba(0, 8, 45,);
+}
 body{
     font-size: 18px;
     font-family: 'Courier New', Courier, monospace;
@@ -8,7 +10,6 @@ body{
     background-color:rgba(0, 8, 45,);
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
 }
 
 .cajacentro {
@@ -23,7 +24,7 @@ body{
     padding:3%;
     border-radius: 20px;
 }
-h3{
+h5{
     width: 300px;
     margin: 10px 0px;
     padding: 10px;
