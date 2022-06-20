@@ -19,7 +19,7 @@
             <!-- PANEL INICIO SESION -->
             <section id="inicioDeSesion" class="visible cajacentro container">
                 <div class="padre container">
-                    <h1>Banco Dev.F</h1>
+                    <h1>Banco Dev</h1>
                     <div class="hijo container">
                         <label for="usuario">Usuario</label>
                         <input id="usuario" type="text" name="usuario">
@@ -32,14 +32,14 @@
             <!-- PANEL INICIO OPERACIONES CAJERO -->
             <section id="inicioOperaciones" class="invisible cajacentro container">
                 <div class="padre container">
-                    <h1>Banco Dev.F</h1>
+                    <h1>Banco Dev</h1>
                     <div class="hijo container">
-                        <h3>¿Que operación deseas realizar?</h3>
+                        <h2>¿Que operación deseas realizar?</h2>
                         <div class="operaciones container">
                             <button onclick='depositar()' class="btn btn-outline-light">Depositar</button>
                             <button onclick="saldo()" class="btn btn-outline-light">Consultar Saldo</button>
                             <button onclick="retirar()" class="btn btn-outline-light">Retirar</button>
-                            <button onclick="salir()" class="btn-fuera btn-outline-danger">Salir</button>
+                            <button onclick="salir()" class=" btn btn-outline-danger">Salir</button>
                         </div>
                     </div>
                 </div>
@@ -47,14 +47,14 @@
             <!-- PANEL INICIO DEPOSITO -->
             <section id="inicioOperacionDeposito" class="invisible cajacentro container">
                 <div class="padre container">
-                    <h1>Banco Dev.F</h1>
+                    <h1>Banco Dev</h1>
                     <div class="hijo container">
-                        <h3>Introduce la cantidad a depositar:</h3>
+                        <h2>Introduce la cantidad a depositar:</h2>
                         <div class="operaciones container">
                             <label for=""></label>
                             <input id="valorDeposito" type="number" placeholder="Introduce la cantidad">
                             <button onclick='cantidadDeposito()' class="btn btn-outline-light">Realizar deposito</button>
-                            <button onclick="salir()" class="btn-fuera btn-outline-danger">Salir</button>
+                            <button onclick="salir()" class=" btn btn-outline-danger">Salir</button>
                         </div>
                     </div>
                 </div>
@@ -62,13 +62,13 @@
             <!-- PANEL INICIO RETIRO -->
             <section id="inicioOperacionRetiro" class="invisible cajacentro container">
                 <div class="padre container">
-                    <h1>Banco Dev.F</h1>
+                    <h1>Banco Dev</h1>
                     <div class="hijo container">
-                        <h3>Introduce la cantidad a retirar:</h3>
+                        <h2>Introduce la cantidad a retirar:</h2>
                         <div class="operaciones container">
                             <input id="numeroRetiro" type="number" placeholder="Introduce la cantidad">
                             <button onclick="cantidadRetiro()" class="btn btn-outline-light">Realizar retiro</button>
-                            <button onclick="salir()" class="btn-fuera btn-outline-danger">Salir</button>
+                            <button onclick="salir()" class=" btn btn-outline-danger">Salir</button>
                         </div>
                     </div>
                 </div>
@@ -76,9 +76,9 @@
             <!-- PANEL INICIO CONSULTAR SALDO -->
             <section id="inicioOperacionSaldo" class="invisible cajacentro container">
                 <div class="padre container">
-                    <h1>Banco Dev.F</h1>
+                    <h1>Banco Dev</h1>
                     <div id="hijoSaldo" class="hijo container">
-                        <h3>Tu saldo disponible es:</h3>
+                        <h2>Tu saldo disponible es:</h2>
                         <div>
                             <input id="resultadoSaldo" type="text" disabled readonly>
                         </div>
@@ -86,7 +86,7 @@
                             <button onclick='depositar()' class="btn btn-outline-light">Depositar</button>
                             <!--onclick no addeventlistener-->
                             <button onclick="retirar()" class="btn btn-outline-light">Retirar</button>
-                            <button onclick="salir()" class="btn-fuera btn-outline-danger">Salir</button>
+                            <button onclick="salir()" class=" btn btn-outline-danger">Salir</button>
                         </div>
 
                     </div>
@@ -95,7 +95,7 @@
         </div>
     </main>
     <footer class="container">
-        <h6>BancoDevF©</h6>
+        <h6>BancoDev©</h6>
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

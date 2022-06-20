@@ -1,15 +1,14 @@
 
 body{
-    
     font-size: 18px;
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
     background-image: url(https://wallup.net/wp-content/uploads/2019/09/147012-bangkok-night-lights.jpg);
-    background-color:rgba(0, 8, 45,) ;
+    background-color:rgba(0, 8, 45,);
     background-repeat: no-repeat;
     background-size: cover;
-
+    overflow: hidden;
 }
 
 .cajacentro {
@@ -24,8 +23,13 @@ body{
     padding:3%;
     border-radius: 20px;
 }
-h2{
+h3{
+    width: 300px;
     margin: 10px 0px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 10px;
 }
 .invisible{
     display: none;
@@ -53,27 +57,7 @@ h2{
     width: 300px;
     border: none;
     border-radius: 10px;
-    background-color: rgba(0, 19, 101, 0.87);
-    color: white;
-    font-weight:500;
-}
-.btn:hover{
-    background-color: rgba(0, 22, 120, 0.87);
-    font-weight: bolder;
-}
-.btn-fuera{
-    margin-top: 15px;
-    padding: 10px;
-    width: 300px;
-    border: none;
-    border-radius: 10px;
-    background-color: rgba(183, 0, 0, 0.75);
-    color: white;
-    font-weight:500;
-}
-.btn-fuera:hover{
-    background-color: rgba(206, 1, 1, 0.75);
-    font-weight: bolder;
+    
 }
 input{
     margin: 15px 0px;

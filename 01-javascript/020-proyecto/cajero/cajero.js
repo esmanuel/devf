@@ -13,8 +13,8 @@ let usuarioActivo;
 let index;
 let nuevoSaldo;
 let divHijoSaldo;
-let retiroH2
-let depoH2;
+let retiroH3
+let depoH3;
 let texto;
 
 
@@ -25,7 +25,7 @@ const cuentas = [
         password: '1234',
     },
     {
-        nombre: 'Alejandro',
+        nombre: 'Deni',
         saldo: 350,
         password: 'qwerty',
     },
@@ -94,15 +94,15 @@ function cantidadDeposito() {
         inicioOperacionSaldo.classList.add('visible');
 
         divHijoSaldo = document.getElementById('hijoSaldo')
-        depoH2 = document.createElement('h2');
+        depoH3 = document.createElement('h3');
         texto = document.createTextNode(`Depositaste: $${valorADepositar}`);
-        depoH2.appendChild(texto);
-        divHijoSaldo.prepend(depoH2);
+        depoH3.appendChild(texto);
+        divHijoSaldo.prepend(depoH3);
 
         nuevoSaldo = document.getElementById('resultadoSaldo');
         nuevoSaldo.value = `$${cuentas[index].saldo}`;
 
-        divHijoSaldo.removeChild(retiroH2);
+        divHijoSaldo.removeChild(retiroH3);
     }
 }
 
@@ -136,15 +136,15 @@ function cantidadRetiro() {
         inicioOperacionSaldo.classList.add('visible');
 
         divHijoSaldo = document.getElementById('hijoSaldo')
-        retiroH2 = document.createElement('h2');
+        retiroH3 = document.createElement('h3');
         texto = document.createTextNode(`Retiraste: $${valorARetirar}`);
-        retiroH2.appendChild(texto);
-        divHijoSaldo.prepend(retiroH2);
+        retiroH3.appendChild(texto);
+        divHijoSaldo.prepend(retiroH3);
 
         nuevoSaldo = document.getElementById('resultadoSaldo');
         nuevoSaldo.value = `$${cuentas[index].saldo}`;
 
-        divHijoSaldo.removeChild(depoH2);
+        divHijoSaldo.removeChild(depoH3);
     }
 }
 
