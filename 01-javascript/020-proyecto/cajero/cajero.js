@@ -39,7 +39,6 @@ function iniciarSesion() {
     //obtener valores usuario y contraseña
     usuario = document.getElementById('usuario').value;
     contrasena = document.getElementById('contrasena').value;
-    console.log(usuario, contrasena);
 
     function validador(element) {
         return element.nombre === usuario;
@@ -128,7 +127,7 @@ function cantidadRetiro() {
 
     } else if ((cuentas[index].saldo - valorARetirar) < 10) {
         let minimo = cuentas[index].saldo - 10;
-        alert(`Solo puedes retirar $${minimo}.00 mxn. Recuerda debes tener un min. de $10.00 mxn en tu cuenta. `)
+        alert(`Solo puedes retirar $${minimo}.00 mxn. Recuerda, debes tener un min. de $10.00 mxn en tu cuenta. `)
     } else {
 
         cuentas[index].saldo = (cuentas[index].saldo - valorARetirar);
