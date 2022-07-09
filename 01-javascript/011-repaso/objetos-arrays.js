@@ -1,29 +1,32 @@
 const usuarios =[
-    {
+    {                   //0
         id:0,
-        nombre:"",
-        edad:"",
+        nombre:"Manuel",
+        edad:"1234",
         esAdulto:true,
     },
-    {
+    {                   //1
         id:1,
-        nombre:"",
-        edad:"",
+        nombre:"Haydee",
+        edad:"1234",
         esVip:true,
     },
-    {
+    {                   //2
         id:2,
-        nombre:"",
-        edad:"",
+        nombre:"Caro",
+        edad:"1234",
         
     }
 ]
 //Modificar nombre del segundo objeto
-usuarios[1].nombre="Carlos";
+usuarios[2].nombre="Alejandra";
+console.log(usuarios[1].nombre);
 
 //
-function validador(element){
-    return element.id===2;
+function validador(elemento){
+    return elemento.id===2;
 }
-const index=usuarios.findIndex(validador);
-usuarios[index]
+const index = usuarios.findIndex(validador);
+
+usuarios[index];
+    

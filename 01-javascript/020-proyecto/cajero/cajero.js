@@ -17,18 +17,18 @@ let depoH5;
 let texto;
 
 
-const cuentas = [
-    {
+const cuentas = [ //cuentas[0].nombre
+    {                   //0
         nombre: 'Manuel',
         saldo: 300,
         password: '1234',
     },
-    {
+    {                   //1
         nombre: 'Deni',
         saldo: 350,
         password: 'qwerty',
     },
-    {
+    {                   //2
         nombre: 'Angelica',
         saldo: 900,
         password: 'asdf',
@@ -47,7 +47,7 @@ function iniciarSesion() {
     cuentas[index];
 
     //Validacion usuario y contraseña
-    if (index === -1) {
+    if (index === -1) { //no existe
         alert('La contraseña y/o el usuario son incorrectos. Verifique sus datos.')
     } else if (contrasena !== cuentas[index].password) {
         alert('La contraseña y/o el usuario son incorrectos. Verifique sus datos.')
