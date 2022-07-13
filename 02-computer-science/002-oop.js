@@ -1,5 +1,4 @@
 
-
 class Alumno {
     constructor(nombre, apellido, caliFinal, inscrito, calificaciones){
     this.nombre = nombre;
